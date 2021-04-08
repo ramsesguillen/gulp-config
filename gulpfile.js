@@ -62,7 +62,7 @@ function css( done ) {
 
 
 function watchArchivos() {
-    watch( paths.scss ); //: * = La carpeta actual - ** = Todos los archivos con esa extensión
+    watch( paths.scss, css ); //: * = La carpeta actual - ** = Todos los archivos con esa extensión
     watch( paths.js, javascript );
 }
 
