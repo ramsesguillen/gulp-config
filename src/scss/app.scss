@@ -1,14 +1,12 @@
-// Orden de las importaciones - importante
+@import 'base/normalize';
 @import 'base/variables';
+@import 'base/utilidades';
+@import 'base/mixins';
+@import 'base/globales';
 
-
-body {
-    font-family: $fuentePrincipal;
-}
-
-h1 {
-    font-family: $fuentePrincipal;
-}
-p {
-    font-family: $fuentePrincipal;
-}
+// @import 'layout/UI';
+// @import 'layout/tabs';
+// @import 'layout/servicios';
+// @import 'layout/paginacion';
+// @import 'layout/formulario';
+// @import 'layout/resumen';
