@@ -28,10 +28,10 @@ const paths = {
 function javascript() {
     return src( paths.js )
             .pipe( sourcemaps.init() )
+            .pipe( concat('bundle.js') )
             .pipe( babel({
                 presets: ['@babel/env']
             }))
-            .pipe( concat('bundle.js') )
             .pipe( terser() )
             .pipe( sourcemaps.write('.') )
             .pipe( rename({ suffix: '.min' } ) )
