@@ -15,6 +15,7 @@ const sourcemaps = require('gulp-sourcemaps');
 // Utilidades js
 const terser = require('gulp-terser-js');
 const rename = require('gulp-rename');
+const babel = require('gulp-babel');
 
 
 const paths = {
@@ -27,6 +28,9 @@ const paths = {
 function javascript() {
     return src( paths.js )
             .pipe( sourcemaps.init() )
+            .pipe( babel({
+                presets: ['@babel/env']
+            }))
             .pipe( concat('bundle.js') )
             .pipe( terser() )
             .pipe( sourcemaps.write('.') )
